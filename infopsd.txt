@@ -9,7 +9,7 @@ desk-one
 2000x870 bg - image/svg
 
 box-desk__one
-1170x872
+1170x872 (800 with cookies bar)
 
 m_b 750 right 15
 menu-icon svg (About Me - Services - My Works - Clients)
@@ -32,6 +32,7 @@ hire me
 m_b 92 	btn 		bg_c w border radius
 
 m_b 24 	downarrow 	svg
+_______________________________________________________________________________________________________________________________________________
 
 desk-two
 2000x410(408) bg_c w
