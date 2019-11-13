@@ -78,21 +78,24 @@ $mobile: 400px;
 .wrapper {
     padding: 100px 0;
 }
+.wrapper--menu { 
+    background-color: $color-menu;
+    padding: 20px 0;
+    
+    .nav-menu {
+        @include center;
+
+        .menu {
+           
+           
+        }
+    }
+}
 
 .wrapper--blue {
     background: linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
     height: 100vh;
 
-    .nav-menu {
-        @include center;
-
-        .menu {
-
-            &__item {
-
-            }
-        }
-    }
 
     .header {
         @include center;
