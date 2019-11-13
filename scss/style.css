@@ -24,31 +24,33 @@ a {
 .desk {
   width: 2000px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .desk-one {
   height: 870px;
   background-image: url(/images/head_back.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   color: white;
   text-transform: uppercase;
 }
 
 .desk-two {
-  max-height: 410px;
+  height: 410px;
   background-color: white;
 }
 
 .desk-three {
-  max-height: 1140px;
+  height: 1140px;
   background-color: #F0F7FF;
 }
 
 .desk-five {
   max-height: 360px;
   background-color: #F0F7FF;
+}
+
+.desk-six {
+  max-height: 247px;
+  background-image: url(/images/footer_back.png);
 }
 
 .box-desk {
@@ -60,17 +62,19 @@ a {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 1170px;
-  height: 870px;
   margin: 0 auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  border: 2px solid yellow;
+}
+
+.box-desk.box-desk__one {
+  height: 870px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .box-desk.box-desk__two {
@@ -78,8 +82,30 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-transform: none;
   line-height: 2;
+}
+
+.box-desk.box-desk__three {
+  height: 1140px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box-desk.box-desk__four {
+  height: 1020px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box-desk.box-desk__six {
+  height: 246px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-item {
@@ -94,25 +120,33 @@ a {
   border-bottom: 5px solid white;
 }
 
-.headline__one {
+.headline {
   font-size: 4.2em;
+  opacity: 0.9;
+}
+
+.headline__one {
   font-weight: bold;
 }
 
 .headline__two, .headline__three, .headline__four, .headline__five {
   color: #2992FB;
-  font-size: 4.1em;
-  text-transform: none;
-  opacity: 0.8;
+}
+
+.headline__six {
+  font-size: 2.5em;
+  color: white;
+}
+
+.lead {
+  font-size: 1.4em;
 }
 
 .lead__one {
-  font-size: 1.4em;
   opacity: 0.7;
 }
 
 .lead__two, .menu__lead {
-  font-size: 1.4em;
   color: black;
 }
 
@@ -131,7 +165,6 @@ a {
           justify-content: space-between;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  border: 1px solid green;
 }
 
 .menu-desk__three .menu_item, .menu-desk__four .menu_item {
@@ -144,13 +177,25 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu-desk__five {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row  wrap;
+          flex-flow: row  wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid greenyellow;
 }
 
 .menu__subtitle {
@@ -162,14 +207,13 @@ a {
 .btn {
   width: 205px;
   height: 55px;
-  margin: 0 auto;
   font-family: 'Lato', sans-serif;
   font-size: 16pt;
   font-weight: bold;
-  opacity: 0.8;
   color: #2992FB;
   line-height: 55px;
   white-space: nowrap;
+  text-transform: uppercase;
   background-color: white;
   border: 1px solid white;
   border-radius: 100px;

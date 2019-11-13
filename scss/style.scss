@@ -22,49 +22,65 @@ html, body {
     .desk {
     width: 2000px;
     margin: 0 auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     }
     .desk-one {
     height: 870px;
     background-image: url(/images/head_back.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     color: white;
     text-transform: uppercase;
     }
     .desk-two {
-    max-height: 410px;
+    height: 410px;
     background-color: white;
     }
     .desk-three {
-    max-height: 1140px;
+    height: 1140px;
     background-color:#F0F7FF;
     }
     .desk-five {
     max-height: 360px;
     background-color:#F0F7FF;
-        }
+    }
+    .desk-six {
+    max-height: 247px;
+    background-image: url(/images/footer_back.png)
+    }
     
     .box-desk {
     display: flex;
     flex-flow: column nowrap;
     width: 1170px;
-    height: 870px;
     margin: 0 auto;
-    justify-content: space-between;
     align-items: center;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    border: 2px solid yellow;
-        &.box-desk__two{
-        height: 410px;
-        justify-content: center;
-        text-transform: none;
-        line-height: 2;
-        }
+    // border: 2px solid yellow;
+    &.box-desk__one{
+    height: 870px;
+    justify-content: space-between;
+    }
+    &.box-desk__two{
+    height: 410px;
+    justify-content: center;
+    line-height: 2;
+    }
+    &.box-desk__three {
+    height: 1140px;
+    justify-content: space-around;
+    }
+    &.box-desk__four {
+    height: 1020px;
+    justify-content: space-around;
+    }
+    &.box-desk__six {
+    height: 246px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
     }
 
-    .menu-item{
+    .menu-item {
         display: inline-block;
         width: 150px;
         font-size: 1.7em;
@@ -75,48 +91,57 @@ html, body {
     }    
     }
 
-    .headline__one {
+    .headline {
     font-size: 4.2em;
-    font-weight: bold;
+    opacity: 0.9;
     }
-    
-    .headline__two, .headline__three, .headline__four, .headline__five {
-    color: #2992FB;    
-    font-size: 4.1em;
-    text-transform: none;
-    opacity: 0.8;
-    }
+        .headline__one {
+        font-weight: bold;
+        }
+        .headline__two, .headline__three, .headline__four, .headline__five {
+        color: #2992FB;    
+        }
+        .headline__six {
+        font-size: 2.5em;
+        color: white;
+        }
 
+    .lead {
+    font-size: 1.4em;
+    }    
         .lead__one {
-        font-size: 1.4em;
         opacity: 0.7;
         }
-    
         .lead__two, .menu__lead{
-        font-size: 1.4em;
         color: black;
         }
 
 
-    .menu-desk__three, .menu-desk__four{
+    .menu-desk__three, .menu-desk__four {
         display: flex;
         flex-flow: row  wrap;
         width: 1170px;
         height: 800px;
         justify-content: space-between;
         align-content: space-around;
-        border: 1px solid green;
+        // border: 1px solid green;
         .menu_item {
         width: 360px;
         height: 360px;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid greenyellow;
+        justify-content: space-around;
+        // border: 1px solid greenyellow;
         }
     }
-    
+    .menu-desk__five {
+    display: flex;
+    width: 100%;
+    flex-flow: row  wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    // border: 1px solid green;
+    }
 
 .menu__subtitle {
     color: #2992FB;    
@@ -127,14 +152,13 @@ html, body {
     .btn {
     width: 205px;
     height: 55px;
-    margin: 0 auto;
     font-family: 'Lato', sans-serif;
     font-size: 16pt;
     font-weight: bold;
-    opacity: 0.8;
     color: #2992FB;
     line-height: 55px;
     white-space: nowrap;
+    text-transform: uppercase;
     background-color: white;
     border: 1px solid white;
     border-radius: 100px;

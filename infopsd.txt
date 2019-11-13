@@ -108,7 +108,7 @@ Latest Works
 
 m_t 233 start menu-works__one-tree 1140x595(all works) (one work 360x270)
 svg/png work_1/work_6
-
+_______________________________________________________________________________________________________________________________________________
 desk-five info-footer
 2000x360 bg_c w
 
@@ -117,11 +117,11 @@ Clients
 
 m_t 215 logos-footer 1043x53
 svg/png ..-logo.png
-
+_______________________________________________________________________________________________________________________________________________
 desk-six footer
 2000x247 bg_c png/svg footer_back
 
-box-desk__five
+box-desk__six
 1170x248
 
 m_t 100 p_l 15 mid left Lato Light/Bold 50 va 0 color w 
