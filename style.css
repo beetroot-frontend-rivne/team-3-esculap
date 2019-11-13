@@ -14,45 +14,9 @@ ul {
 /*end of variables*/
 /*------------------mixins------------------*/
 /*end of mixins*/
-/*------------------HEADER------------------*/
-.wrapper {
-  padding: 100px 0; }
-
-.wrapper--menu {
-  background-color: #194277;
-  padding: 20px 0; }
-  .wrapper--menu .nav-menu {
-    width: 1140px;
-    padding: 0 15px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center; }
-
-.wrapper--blue {
-  background: linear-gradient(39deg, #3695ff 0%, #3564fc 100%);
-  height: 100vh; }
-  .wrapper--blue .header {
-    width: 1140px;
-    padding: 0 15px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center; }
-
-/*enf of HEADER*/
-/*------------------MAIN------------------*/
-.block,
-.list,
-.carousel,
-.content {
+.container {
   width: 1140px;
   padding: 0 15px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center; }
-
-.wrapper--gray {
-  background-color: #f1f8ff; }
-
-/*------------------FOOTER*------------------*/
-.wrapper--blue-small {
-  height: auto; }

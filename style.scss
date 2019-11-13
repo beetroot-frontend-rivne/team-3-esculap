@@ -45,14 +45,6 @@ $mobile: 400px;
     transform: $property;
 }
 
-@mixin center {
-    width: 1140px;
-    padding: 0 15px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
 @mixin tablet {
     @media only screen and (max-width: #{$tablet}) {
         @content;
@@ -73,50 +65,10 @@ $mobile: 400px;
 
 
 
-
-/*------------------HEADER------------------*/
-.wrapper {
-    padding: 100px 0;
-}
-.wrapper--menu { 
-    background-color: $color-menu;
-    padding: 20px 0;
-    
-    .nav-menu {
-        @include center;
-
-        .menu {
-           
-           
-        }
-    }
-}
-
-.wrapper--blue {
-    background: linear-gradient( 39deg, rgb(54,149,255) 0%, rgb(53,100,252) 100%);
-    height: 100vh;
-
-
-    .header {
-        @include center;
-    }
-}
-/*enf of HEADER*/
-
-/*------------------MAIN------------------*/
-.block,
-.list,
-.carousel,
-.content {
-    @include center;
-}
-
-.wrapper--gray {
-    background-color: $color-bgr;
-}
-
-/*------------------FOOTER*------------------*/
-
-.wrapper--blue-small {
-    height: auto;
+.container {
+    width: 1140px;
+    padding: 0 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
