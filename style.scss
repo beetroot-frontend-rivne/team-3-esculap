@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*------------------variables------------------*/
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 700;
+$weight-black: 900;
+$family:'Lato', sans-serif;
+$fsize-primary: 16px;
+$fsize-title: 50px;
+$color1: #3677fd;
+$color2: #5a5a5a;
+$color-basic: #fff;
+$color-menu: #194277;
+$color-bgr: #f1f8ff;
+
+$tablet: 768px;
+$mobile: 400px;
+/*end of variables*/
+
+/*------------------mixins------------------*/
+@mixin font($font, $size, $weight,$color) { 
+        font-family: $family;
+        font-size: $size;
+        font-weight: $weight;
+        color: $color;   
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin tablet {
+    @media only screen and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+/*end of mixins*/
+
+// h2 {
+// .box { @include transform(rotate(30deg)); }
+//     @include font($family, $weight-regular, $fsize-title, $color1);
+// }
+
+
+
+.container {
+    width: 1140px;
+    padding: 0 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}

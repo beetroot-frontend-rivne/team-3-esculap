@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  list-style-type: none; }
+
+/*------------------variables------------------*/
+/*end of variables*/
+/*------------------mixins------------------*/
+/*end of mixins*/
+.container {
+  width: 1140px;
+  padding: 0 15px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center; }
