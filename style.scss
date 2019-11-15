@@ -72,3 +72,42 @@ $mobile: 400px;
     margin: 0 auto;
     text-align: center;
 }
+
+.examples {
+    .container {
+    background-color:#F0F7FF;
+    }
+}
+
+.carousel {
+    .container {
+        background-color:#F0F7FF;
+    }
+    .logo--carousel{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+    }
+}
+
+.title {
+    font-family: 'Lato', sans-serif;
+    font-size: 4.2em;
+    opacity: 0.9;
+}
+
+    .title--examples, 
+    .title--carousel {
+    color: #2992FB;    
+    }
+
+.lead {
+    font-size: 1.4em;
+}    
+
+    .lead--main {
+        line-height: 2;
+        color: black;
+        }
