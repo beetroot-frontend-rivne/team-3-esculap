@@ -27,9 +27,8 @@ $color2: #5a5a5a;
 $color-basic: #fff;
 $color-cookie: #194277;
 $color-bgr: #f1f8ff;
-
-$tablet: 768px;
-$mobile: 500px;
+$tablet-screen-width: 768px;
+$mobile-screen-width: 500px;
 /*end of variables*/
 
 /*------------------mixins------------------*/
@@ -40,48 +39,42 @@ $mobile: 500px;
         color: $color;   
 }
 
-@mixin transform($property) {
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
-}
-
 @mixin tablet {
-    @media only screen and (max-width: #{$tablet}) {
+    @media only screen and (max-width: #{$tablet-screen-width}) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media only screen and (max-width: #{$mobile}) {
+    @media only screen and (max-width: #{$mobile-screen-width}) {
         @content;
     }
 }
 
 .container {
     width: 1140px;
-    padding: 90px 15px;
     max-width: 100%;
+    padding: 90px 15px;
     margin: 0 auto;
     text-align: center;
-}
 
-.container--small {
-    padding: 20px 15px;
+    &--small {
+        padding: 20px 15px;
+    }
 }
-
+ 
 .title {
     @include font($family, $fsize-title, $weight-light, $color1);
     text-transform: capitalize;
-}
 
-.title--header {
-    @include font($family, $fsize-title, $weight-black, $color-basic);
-    text-transform: uppercase;
-     padding: 40px;
+    &--header {
+        padding: 40px 0;
+        @include font($family, $fsize-title, $weight-black, $color-basic);
+        text-transform: uppercase;
 
-    @include mobile {
-        font-size: $fsize-medium;
+        @include mobile {
+            font-size: $fsize-medium;
+        }
     }
 }
 
@@ -94,10 +87,7 @@ $mobile: 500px;
         padding: 20px;
         text-align: center;
         background-color: $color-basic;
-        border-bottom-left-radius: 27px;
-        border-top-left-radius: 27px;
-        border-top-right-radius: 27px;
-        border-bottom-right-radius: 27px;
+        border-radius: 27px;
         transition: all 0.3s ease-in-out;
 
         @include mobile {
@@ -106,10 +96,10 @@ $mobile: 500px;
         
         .btn {
             width: 100%;
-            @include font($family, $fsize-primary, $weight-bold, $color1);
-            text-transform: uppercase;
             background-color: $color-basic;
             border: none;
+            @include font($family, $fsize-primary, $weight-bold, $color1);
+            text-transform: uppercase;
         }
 
         &:hover {
@@ -149,8 +139,8 @@ $mobile: 500px;
             justify-content: center;
 
             .cookies__desc {
-                @include font($family, $fsize-primary, $weight-regular, $color-basic);
                 padding: 0 50px;
+                @include font($family, $fsize-primary, $weight-regular, $color-basic);
 
                 @include mobile {
                     padding: 0;
@@ -158,7 +148,7 @@ $mobile: 500px;
             }
 
             @include mobile {
-                flex-direction: column;;
+                flex-direction: column;
             }
         }
     }
@@ -189,11 +179,11 @@ $mobile: 500px;
                 &:active + .menu {
                         display: flex;
                         flex-direction: column;
-                        background-color: $color-basic;
-                        text-align: center;
                         width: 100%;
                         height: 50vh;
                         border-radius: 9px;
+                        background-color: $color-basic;
+                        text-align: center;
 
                         .menu__item {
                             color: $color2;
@@ -213,9 +203,9 @@ $mobile: 500px;
                 justify-content: center;
 
                 &__item {
+                    padding: 5px 10px;
                     @include font($family, $fsize-medium, $weight-light, $color-bgr);
                     text-transform: capitalize;
-                    padding: 5px 10px;
                     transition: all 0.3s ease-in-out;
 
                     &:hover,
@@ -240,15 +230,15 @@ $mobile: 500px;
                  &:active {
                     display: flex;
                     flex-direction: column;
-                    background-color: $color-basic;
-                    text-align: center;
                     width: 100%;
                     height: 50vh;
                     border-radius: 9px;
-
+                    background-color: $color-basic;
+                    text-align: center;
+                
                     .menu__item {
-                        color: $color2;
                         padding: 15px;
+                        color: $color2;
 
                         &:hover,
                         &:active {
@@ -269,7 +259,7 @@ $mobile: 500px;
             margin: 0 auto;
 
             &__logo {
-                width:175px;
+                width: 175px;
                 height: 175px;
                 border-radius: 50%;
                 background-color: $color-basic;
@@ -277,10 +267,10 @@ $mobile: 500px;
             }
 
             &__subtitle {
+                padding: 5px 0;
                 @include font($family, $fsize-primary, $weight-light, $color-basic);
                 text-transform: uppercase;
                 opacity: 0.59;
-                padding: 5px 0 
             }
 
             &__control {
@@ -316,10 +306,10 @@ $mobile: 500px;
                 align-items: center;
                 width: 142px;
                 height: 142px;
+                padding: 25px;
+                margin: 0 auto;
                 border: 1px solid $color2;
                 border-radius: 50%;
-                margin: 0 auto;
-                padding: 25px;
                 transition: all 0.2s ease-in-out;
 
                 &:hover {
@@ -329,9 +319,9 @@ $mobile: 500px;
             } 
 
             .list__title {
+                padding: 25px;
                 @include font($family, $fsize-medium, $weight-bold, $color1);
                 text-transform: uppercase;
-                padding: 25px;
             }
 
             .list__desc {
@@ -370,4 +360,3 @@ $mobile: 500px;
         }
     }
 }
-
