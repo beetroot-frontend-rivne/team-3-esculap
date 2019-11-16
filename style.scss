@@ -122,6 +122,7 @@ $mobile-screen-width: 500px;
 .header {
     // height: 100vh;
     height: 100%;
+}    
 
     .cookies {
         background-color: $color-cookie;
@@ -131,17 +132,17 @@ $mobile-screen-width: 500px;
             align-items: center;
             justify-content: center;
 
-            .cookies__desc {
-                padding: 0 50px;
-                @include font($family, $fsize-primary, $weight-regular, $color-basic);
-
-                @include mobile {
-                    padding: 0;
-                }
-            }
-
             @include mobile {
                 flex-direction: column;
+            }
+        }
+
+        &__desc {
+            padding: 0 50px;
+            @include font($family, $fsize-primary, $weight-regular, $color-basic);
+
+            @include mobile {
+                padding: 0;
             }
         }
     }
@@ -149,47 +150,11 @@ $mobile-screen-width: 500px;
     .slider {
         background: url(./assets/img/bgr.jpg) 50% no-repeat;
         background-size: cover;
-
+    }
         .nav-menu {
             padding:  10px 0 30px;
 
-            .toggler {
-                display: none;
-                position: absolute;
-                right: 15px;
-                width: 42px;
-                height: 42px;
-    
-                @include tablet  {
-                    display: block;
-    
-                &:hover,
-                &:active {
-                    cursor: pointer;
-                }
-    
-                &:hover + .menu,
-                &:active + .menu {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-                        height: 50vh;
-                        border-radius: 9px;
-                        background-color: $color-basic;
-                        text-align: center;
-
-                        .menu__item {
-                            color: $color2;
-                            padding: 15px;
-                        }
-                    }
-                }
-                
-                i {
-                    font-size: 42px;
-                    color: $color-basic;
-                }
-            }
+      
             
             .menu {
                 display: flex;
@@ -238,8 +203,46 @@ $mobile-screen-width: 500px;
                             color: $color1;
                         }
                     }
-                 }
-             }
+                }
+            }
+        }
+    }
+
+    .toggler {
+        display: none;
+        position: absolute;
+        right: 15px;
+        width: 42px;
+        height: 42px;
+
+        i {
+            font-size: 42px;
+            color: $color-basic;
+        }
+
+        @include tablet  {
+            display: block;
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+        }
+
+        &:hover + .menu,
+        &:active + .menu {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 50vh;
+                border-radius: 9px;
+                background-color: $color-basic;
+                text-align: center;
+
+                .menu__item {
+                    color: $color2;
+                    padding: 15px;
+                }
+            }
         }
     }
 
@@ -270,14 +273,12 @@ $mobile-screen-width: 500px;
                 padding: 20px 0;
             }
         }
-    }
-}
 
 /*MAIN*/
 
 .desc {
     background-color: $color-bgr;
-    
+}   
     .list {
         display: flex;
         flex-flow: row wrap;
@@ -291,37 +292,36 @@ $mobile-screen-width: 500px;
             @include mobile {
                 flex: 100%;
             }        
+        }
+        
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 142px;
+            height: 142px;
+            padding: 25px;
+            margin: 0 auto;
+            border: 1px solid $color2;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
 
-            .list__icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 142px;
-                height: 142px;
-                padding: 25px;
-                margin: 0 auto;
-                border: 1px solid $color2;
-                border-radius: 50%;
-                transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    border: 1px solid $color1;
-                    background-color: $color-basic;
-                }
-            } 
-
-            .list__title {
-                padding: 25px;
-                @include font($family, $fsize-medium, $weight-bold, $color1);
-                text-transform: uppercase;
+            &:hover {
+                border: 1px solid $color1;
+                background-color: $color-basic;
             }
+        } 
 
-            .list__desc {
-                @include font($family, $fsize-primary, $weight-regular, $color2);
-            }
+        &__title {
+            padding: 25px;
+            @include font($family, $fsize-medium, $weight-bold, $color1);
+            text-transform: uppercase;
+        }
+        
+        &__desc {
+            @include font($family, $fsize-primary, $weight-regular, $color2);
         }
     }
-}
 
     .nav-examples {
         display: flex;
@@ -333,14 +333,6 @@ $mobile-screen-width: 500px;
             width: 33%;
             padding: 15px;
 
-            .item-container {
-                width: 100%;
-
-                img {
-                    width: 100%;
-                }
-            }
-
             @include tablet {
                 flex: 1 0 (1 / 2 * 100%);
             }
@@ -349,10 +341,19 @@ $mobile-screen-width: 500px;
                 flex: 100%;
             }
         }
+            
+        &__inner {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 
 .carousel {
     background-color: $color-bgr;
+}
 
     .logo-carousel {
         display: flex;
@@ -368,6 +369,7 @@ $mobile-screen-width: 500px;
             @include tablet {
                 flex: 1 0 (1 / 2 * 100%);
             }
+
             @include mobile {
                 flex: 100%;
             }
@@ -377,12 +379,10 @@ $mobile-screen-width: 500px;
             flex-direction: column;
         }
     }
-}
 
 .lead {
     @include font($family, $fsize-primary, $weight-regular, $color2);
     line-height: 35px;
-
 }
  
 /*FOOTER*/
