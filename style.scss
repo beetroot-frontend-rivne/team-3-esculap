@@ -33,7 +33,7 @@ $mobile-screen-width: 500px;
 
 /*------------------mixins------------------*/
 @mixin font($font, $size, $weight,$color) { 
-        font-family: $family;
+        font-family: $font;
         font-size: $size;
         font-weight: $weight;
         color: $color;   
